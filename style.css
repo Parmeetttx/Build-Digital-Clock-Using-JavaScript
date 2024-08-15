@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color:aquamarine ;
+    font-family: "Josefin Sans" , serif;
+    font-weight: 900;
+}
+
+.clock-body{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem;
+    border: 4px solid #000;
+    background-color: #8e3adc;
+    border-radius: 10px 0 10px 10px;
+    z-index: 0;
+}
+
+.clock-body::after,
+.clock-body::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff47;
+    border-radius: 60px;
+    top: 0;
+    z-index: -1;
+    animation: scale 2s infinite ease-in-out;
+}
+
+.clock-body::after{
+    left: 50%;
+}
+
+.clock-body::before{
+    left: 30%;
+}
+
+@keyframes scale {
+    0%{transform: scale(1.1);}
+    50%{transform: scale(1.3);}
+    100%{transform: scale(1.1);}
+}
+
+.clock-body .span{
+    font-size: 4rem;
+    color: #000;
+    text-shadow: 2px 2px aquamarine;
+}
+
+.clock{
+    display: flex;
+    justify-content: space-between;
+}
+
+.span-0 , .span-5{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.span-5{
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 0.3rem 0 0.3rem;
+    border-radius: 10px 10px 0 0;
+}
